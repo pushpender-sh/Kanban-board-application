@@ -27,6 +27,11 @@
 .App-link {
   color: #61dafb;
 }
+.body{
+  display: flex;
+  flex-direction: column;
+  
+}
 
 .navbar{
   height: 50px;
@@ -47,6 +52,7 @@
 
 }
 .dropdown{
+  position: relative;
   /* border: 2px solid grey; */
   margin-left: 50px;
   margin-top: 5px;
@@ -55,6 +61,7 @@
   width: 300px;
   background-color: white;
   box-shadow: 10px 10px 15px rgba(3, 4, 94, 0.1);
+  z-index: 2;
 }
 
 .dropdown-row{
@@ -64,14 +71,39 @@
 }
 
 .card{
-  border: 2px solid black;
-  height: 100px;
-  width: 400px;
+  border: 1px solid grey;
+  box-shadow: 10px 10px 15px rgba(3, 4, 94, 0.1);
+  border-radius: 5px;
+  width: 15vw;
+  padding: 10px;
+  margin-bottom: 20px;
 }
 
 .cardHeader{
   display: flex;
   justify-content: space-between;
+}
+.image{
+  border: 1px solid black;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+
+.column{
+  padding: 30px;
+  width: 15vw;
+  display: flex;
+  flex-direction: column;
+  
+}
+.bodyColumn{
+  display: flex;
+}
+.columnHeader{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
 }
 
 
