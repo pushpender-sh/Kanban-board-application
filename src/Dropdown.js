@@ -1,21 +1,41 @@
 import React from "react";
 import { useAuth } from "./context";
 
-export default function Dropdown() {
+export default function Dropdown({ open, setOpen }) {
   const { data, groupBy, setGroupBy, orderBy, setOrderBy } = useAuth();
   return (
     <div className="dropdown">
       <div className="dropdown-row">
         <div>Grouping</div>
-        <select value={groupBy} onChange={(e) => setGroupBy(e.target.value)}>
-          <option value="status">Status</option>
-          <option value="user">User</option>
-          <option value="priority">Priority</option>
+        <select
+          className="selectbar"
+          value={groupBy}
+          onChange={(e) => {
+            setGroupBy(e.target.value);
+            setOpen(false);
+          }}
+        >
+          <option className="options" value="status">
+            Status
+          </option>
+          <option className="options" value="user">
+            User
+          </option>
+          <option className="options" value="priority">
+            Priority
+          </option>
         </select>
       </div>
       <div className="dropdown-row">
         <div>Ordering</div>
-        <select value={orderBy} onChange={(e) => setOrderBy(e.target.value)}>
+        <select
+          className="selectbar"
+          value={orderBy}
+          onChange={(e) => {
+            setOrderBy(e.target.value);
+            setOpen(false);
+          }}
+        >
           <option value="priority">Priority</option>
           <option value="title">Title</option>
         </select>

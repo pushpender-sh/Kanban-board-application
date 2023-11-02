@@ -1,28 +1,67 @@
 import React from "react";
 import Card from "./Card";
+import { useAuth } from "./context";
 
-export default function Column({ title, id, data }) {
-  const filteredTickets = data.tickets.filter((item) => id === item.userId);
+export default function Column({ title, id, img }) {
+  const { data, groupBy } = useAuth();
+  const filteredUsertickets = data?.tickets?.filter(
+    (item) => id === item?.userId
+  );
 
+  const filteredPrioritytickets = data?.tickets?.filter(
+    (item) => id === item?.priority
+  );
+
+  const filteredStatustickets = data?.tickets?.filter(
+    (item) => id === item?.status
+  );
   return (
     <div className="column">
       <div className="columnHeader">
-        <div className="image"></div>
-        <div>{title}</div>
-        <div> + ...</div>
+        <div className="nameimg">
+          <img className="image" src={img} />
+          <div>{title}</div>
+        </div>
+        <div> + ---</div>
       </div>
-      {filteredTickets.map((item) => {
-        return (
-          <Card
-            key={item.id}
-            id={item.id}
-            title={item.title}
-            tag={item.tag}
-            status={item.status}
-            priority={item.priority}
-          />
-        );
-      })}
+      {groupBy === "user"
+        ? filteredUsertickets?.map((item) => {
+            return (
+              <Card
+                key={item.id}
+                id={item.id}
+                title={item.title}
+                tag={item.tag}
+                status={item.status}
+                priority={item.priority}
+              />
+            );
+          })
+        : groupBy === "status"
+        ? filteredStatustickets?.map((item) => {
+            return (
+              <Card
+                key={item.id}
+                id={item.id}
+                title={item.title}
+                tag={item.tag}
+                status={item.status}
+                priority={item.priority}
+              />
+            );
+          })
+        : filteredPrioritytickets?.map((item) => {
+            return (
+              <Card
+                key={item.id}
+                id={item.id}
+                title={item.title}
+                tag={item.tag}
+                status={item.status}
+                priority={item.priority}
+              />
+            );
+          })}
     </div>
   );
 }

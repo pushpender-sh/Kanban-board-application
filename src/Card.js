@@ -5,10 +5,22 @@ export default function Card({ id, title, tag, status, priority }) {
     <div className="card">
       <div className="cardHeader">
         <div> {id}</div>
-        <div className="image"></div>
+        <img className="image" src="robo.png" />
       </div>
       <p>{title}</p>
-      <div> {tag}</div>
+      <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <img className="image" src="what.png" />
+        <div
+          style={{
+            border: "1px solid grey",
+            padding: "5px",
+            borderRadius: "5px",
+          }}
+        >
+          {" "}
+          {tag}
+        </div>
+      </div>
     </div>
   );
 }
