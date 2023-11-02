@@ -7,8 +7,6 @@ export default function Body() {
   const { data, groupBy, orderBy } = useAuth();
   const [open, setOpen] = useState(false);
 
-  console.log(data);
-
   return (
     <div>
       <div className="navbar">
