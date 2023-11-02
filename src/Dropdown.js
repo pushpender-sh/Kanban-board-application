@@ -2,7 +2,16 @@ import React from "react";
 import { useAuth } from "./context";
 
 export default function Dropdown({ open, setOpen }) {
-  const { data, groupBy, setGroupBy, orderBy, setOrderBy } = useAuth();
+  const {
+    data,
+    groupBy,
+    setGroupBy,
+    orderBy,
+    setOrderBy,
+    searchParams,
+    setSearchParams,
+  } = useAuth();
+
   return (
     <div className="dropdown">
       <div className="dropdown-row">
@@ -12,6 +21,10 @@ export default function Dropdown({ open, setOpen }) {
           value={groupBy}
           onChange={(e) => {
             setGroupBy(e.target.value);
+            setSearchParams((prev) => {
+              prev.set("groupBy", e.target.value);
+              return prev;
+            });
             setOpen(false);
           }}
         >

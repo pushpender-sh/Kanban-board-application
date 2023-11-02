@@ -17,7 +17,6 @@ export default function Card({ id, title, tag, status, priority }) {
             borderRadius: "5px",
           }}
         >
-          {" "}
           {tag}
         </div>
       </div>
