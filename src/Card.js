@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Card({ id, title, tag, status, priority }) {
+export default function Card({ id, title, tag }) {
   return (
     <div className="card">
       <div className="cardHeader">
@@ -8,7 +8,13 @@ export default function Card({ id, title, tag, status, priority }) {
         <img className="image" src="robo.png" />
       </div>
       <p>{title}</p>
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
         <img className="image" src="what.png" />
         <div
           style={{

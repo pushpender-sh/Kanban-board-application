@@ -36,7 +36,7 @@
 .navbar{
   height: 50px;
   text-align: left;
-  box-shadow: 10px 5px 15px rgba(3, 4, 94, 0.1);
+  box-shadow: 10px 10px 15px rgba(3, 4, 94, 0.1);
   background-color: white;
 }
 .display{
@@ -45,6 +45,7 @@
   padding: 5px;
   height: 30px;
   width: 80px;
+  background-color: white;
   box-shadow: 5px 5px 10px rgba(3, 4, 94, 0.1);
   display: flex;
   column-gap: 5px;
@@ -54,14 +55,13 @@
 }
 .dropdown{
   position: relative;
-  /* border: 2px solid grey; */
   margin-left: 50px;
   margin-top: 5px;
   border-radius: 5px;
   height: 100px;
-  width: 300px;
-  background-color: white;
-  box-shadow: 10px 10px 15px rgba(3, 4, 94, 0.1);
+  width: 250px;
+  background-color: rgb(242, 239, 239)  ;
+  box-shadow: 10px 10px 10px rgba(3, 4, 94, 0.1);
   z-index: 2;
 }
 
@@ -81,12 +81,14 @@
 }
 
 .card{
-  border: 1px solid grey;
-  box-shadow: 10px 10px 15px rgba(3, 4, 94, 0.1);
-  border-radius: 5px;
+  box-shadow: 10px 10px 15px rgba(3, 4, 94, 0.1),
+  -10px -10px 15px rgba(3, 4, 94, 0.1),
+  -10px 10px 15px rgba(3, 4, 94, 0.1),
+  10px -10px 15px rgba(3, 4, 94, 0.1);
+  border-radius: 10px;
   width: 15vw;
   padding: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .cardHeader{
@@ -94,7 +96,6 @@
   justify-content: space-between;
 }
 .image{
-  border: 1px solid black;
   height: 20px;
   width: 20px;
   border-radius: 50%;

@@ -32,8 +32,6 @@ export default function Column({ title, id, img }) {
                 id={item.id}
                 title={item.title}
                 tag={item.tag}
-                status={item.status}
-                priority={item.priority}
               />
             );
           })
@@ -45,8 +43,6 @@ export default function Column({ title, id, img }) {
                 id={item.id}
                 title={item.title}
                 tag={item.tag}
-                status={item.status}
-                priority={item.priority}
               />
             );
           })
@@ -57,8 +53,6 @@ export default function Column({ title, id, img }) {
                 id={item.id}
                 title={item.title}
                 tag={item.tag}
-                status={item.status}
-                priority={item.priority}
               />
             );
           })}
