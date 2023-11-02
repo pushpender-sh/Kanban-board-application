@@ -46,6 +46,10 @@ export default function Dropdown({ open, setOpen }) {
           value={orderBy}
           onChange={(e) => {
             setOrderBy(e.target.value);
+            setSearchParams((prev) => {
+              prev.set("orderBy", e.target.value);
+              return prev;
+            });
             setOpen(false);
           }}
         >

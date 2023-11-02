@@ -59,6 +59,7 @@ export default function Body() {
               />
             ))}
       </div>
+      <div>copyright© 2023 pushpender</div>
     </div>
   );
 }

@@ -15,10 +15,11 @@ function MyContextProvider({ children }) {
 
   const [searchParams, setSearchParams] = useSearchParams();
 
-  const filter = searchParams.get("groupBy");
+  const group = searchParams.get("groupBy");
+  const order = searchParams.get("orderBy");
 
-  const [groupBy, setGroupBy] = useState(filter || "status");
-  const [orderBy, setOrderBy] = useState("priority");
+  const [groupBy, setGroupBy] = useState(group || "status");
+  const [orderBy, setOrderBy] = useState(order || "priority");
 
   const fetchData = useCallback(() => {
     const apiUrl = "https://api.quicksell.co/v1/internal/frontend-assignment";
