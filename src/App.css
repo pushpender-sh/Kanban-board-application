@@ -28,6 +28,53 @@
   color: #61dafb;
 }
 
+.navbar{
+  height: 50px;
+  text-align: left;
+  box-shadow: 10px 5px 15px rgba(3, 4, 94, 0.1);
+  background-color: white;
+}
+.display{
+  margin-left: 50px;
+  margin-top: 10px;
+  padding: 5px;
+  height: 30px;
+  width: 80px;
+  box-shadow: 5px 5px 10px rgba(3, 4, 94, 0.1);
+
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+.dropdown{
+  /* border: 2px solid grey; */
+  margin-left: 50px;
+  margin-top: 5px;
+  border-radius: 5px;
+  height: 80px;
+  width: 300px;
+  background-color: white;
+  box-shadow: 10px 10px 15px rgba(3, 4, 94, 0.1);
+}
+
+.dropdown-row{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.card{
+  border: 2px solid black;
+  height: 100px;
+  width: 400px;
+}
+
+.cardHeader{
+  display: flex;
+  justify-content: space-between;
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -36,3 +83,5 @@
     transform: rotate(360deg);
   }
 }
+
+
