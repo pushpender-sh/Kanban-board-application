@@ -1,12 +1,15 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Body from "./Body";
+import { MyContextProvider } from "./context";
 
 function App() {
   return (
-    <div className="App">
-      <Body />
-    </div>
+    <MyContextProvider>
+      <div className="App">
+        <Body />
+      </div>
+    </MyContextProvider>
   );
 }
 
