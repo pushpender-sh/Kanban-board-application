@@ -86,7 +86,6 @@
   -10px 10px 15px rgba(3, 4, 94, 0.1),
   10px -10px 15px rgba(3, 4, 94, 0.1);
   border-radius: 10px;
-  width: 15vw;
   padding: 10px;
   margin-bottom: 30px;
 }
@@ -109,12 +108,24 @@
   
 }
 
+
 .nameimg{
   display: flex;
   column-gap: 5px;
 }
 .bodyColumn{
   display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 480px){
+  .bodyColumn{
+    display: grid;
+  }
+  .column{
+    display: grid;
+    width: 100%;
+  }
+  
 }
 .columnHeader{
   display: flex;
